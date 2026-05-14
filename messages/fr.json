@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "title": "SMAESI — Agence propulsée par l'IA pour les entreprises marocaines",
+    "description": "Sites ultra-rapides, e-commerce sur mesure et bots WhatsApp IA en quelques jours — des outils de niveau entreprise à prix locaux."
+  },
+  "locale": {
+    "aria": "Langue",
+    "en": "EN",
+    "fr": "FR",
+    "ar": "AR"
+  },
+  "nav": {
+    "whyUs": "Pourquoi nous",
+    "services": "Services",
+    "bundles": "Packs"
+  },
+  "header": {
+    "bookAudit": "AUDIT OFFERT",
+    "bookAuditMobile": "AUDIT IA OFFERT",
+    "menu": "MENU",
+    "close": "FERMER"
+  },
+  "hero": {
+    "badgeMorocco": "Maroc",
+    "badgeStack": "IA + Next.js",
+    "badgeBots": "Bots WhatsApp",
+    "line1": "Croissez plus vite. Dépensez moins.",
+    "line2": "L'agence propulsée par l'IA",
+    "line3": "pour les entreprises marocaines modernes.",
+    "sub": "Nous créons des sites ultra-rapides, des plateformes e-commerce sur mesure et des bots WhatsApp IA en jours, pas en mois. Des outils de niveau entreprise à prix locaux.",
+    "ctaPrimary": "RÉSERVER VOTRE AUDIT IA OFFERT",
+    "ctaSecondary": "VOIR NOS FORMULES",
+    "auditSubject": "Audit IA offert",
+    "stat1Value": "3×",
+    "stat1Label": "Plus rapide qu'une agence classique",
+    "stat2Value": "70%",
+    "stat2Label": "Moins de temps de dev — économies pour vous",
+    "stat3Value": "Next.js",
+    "stat3Label": "Chargement en millisecondes, même en 3G"
+  },
+  "whyUs": {
+    "headlinePrefix": "Pourquoi payer une agence traditionnelle quand vous pouvez avoir",
+    "headlineAccent": "l'avantage IA",
+    "headlineSuffix": " ?",
+    "body": "Les entreprises marocaines doivent aller vite. Les agences traditionnelles prennent des mois et surfacturent. Parce que notre équipe s'appuie sur les derniers outils de développement IA, nous livrons de meilleurs résultats, 3× plus vite, pour une fraction du coût.",
+    "bullets": [
+      {
+        "icon": "⚡",
+        "title": "Vitesses fulgurantes",
+        "body": "Nous construisons sur une infrastructure moderne (Next.js) pour que votre site se charge en millisecondes, même en 3G mobile. Fini les clients perdus."
+      },
+      {
+        "icon": "🤖",
+        "title": "Intelligence intégrée",
+        "body": "Nous ne faisons pas que des sites ; nous vous donnons des collaborateurs numériques. Nos bots WhatsApp répondent aux clients et qualifient les leads 24h/24."
+      },
+      {
+        "icon": "💰",
+        "title": "Meilleur ROI, coûts plus bas",
+        "body": "Notre flux de travail accéléré par l'IA réduit notre temps de développement de 70%. Nous vous reversons directement ces économies."
+      }
+    ]
+  },
+  "services": {
+    "title": "Tarifs transparents. Solutions évolutives.",
+    "subtitle": "Choisissez un service spécialisé, ou l'un de nos packs groupés pour lancer immédiatement.",
+    "blocks": [
+      {
+        "key": "automation",
+        "badge": "🟢 1. Automatisation IA & bots WhatsApp",
+        "intro": "Arrêtez de perdre du temps sur les tâches répétitives. Engagez un « employé numérique » qui travaille 24h/24 pour le prix d'un stagiaire.",
+        "items": [
+          {
+            "title": "Bot IA WhatsApp / IG (5 000 – 12 000 MAD)",
+            "desc": "Un bot intelligent qui parle darija/français, répond aux FAQ et qualifie les leads directement sur WhatsApp."
+          },
+          {
+            "title": "CRM interne sur mesure (20 000 – 60 000 MAD)",
+            "desc": "Fini les tableurs Excel désordonnés. Nous créons un tableau de bord rapide et sur mesure pour suivre stocks, leads et ventes automatiquement."
+          },
+          {
+            "title": "Hébergement & maintenance des bots (dès 1 500 MAD/mois)",
+            "desc": "Mises à jour et supervision continues pour que votre IA apprenne toujours et reste précise."
+          }
+        ]
+      },
+      {
+        "key": "web",
+        "badge": "🔵 2. Sites & apps ultra-rapides",
+        "intro": "Marre des sites WordPress lents ? Nous créons des produits web modernes, pensés pour le référencement Google et pour convertir les visiteurs en acheteurs.",
+        "items": [
+          {
+            "title": "Site vitrine express (3 500 – 9 000 MAD)",
+            "desc": "Un site 3 à 5 pages élégant et orienté conversion, livré en quelques jours."
+          },
+          {
+            "title": "Site pro complet + SEO (10 000 – 25 000 MAD)",
+            "desc": "Optimisé pour Google, avec blog et formulaires de capture de leads."
+          },
+          {
+            "title": "Plateforme e-commerce (15 000 – 40 000 MAD)",
+            "desc": "Vendez au Maroc ou à l'international avec intégration des moyens de paiement marocains (CMI, Cash Plus) ou suivi du paiement à la livraison (COD)."
+          },
+          {
+            "title": "App mobile / PWA sur mesure (35 000+ MAD)",
+            "desc": "Des apps installables sur le téléphone de vos clients sans passer par les stores."
+          }
+        ]
+      },
+      {
+        "key": "marketing",
+        "badge": "🟣 3. Marketing & contenus pilotés par l'IA",
+        "intro": "Nous ne vous apportons pas seulement des clics ; nous vous envoyons des leads directement sur votre téléphone.",
+        "items": [
+          {
+            "title": "Pack branding (4 000 – 12 000 MAD)",
+            "desc": "Logos modernes, palettes de couleurs et modèles réseaux sociaux conçus avec les derniers outils visuels IA."
+          },
+          {
+            "title": "Starter marketing IA (4 000 – 10 000 MAD)",
+            "desc": "Mise en place professionnelle de vos campagnes Meta/Google et du pixel de suivi."
+          },
+          {
+            "title": "Accompagnement croissance mensuel (dès 4 000 MAD/mois)",
+            "desc": "Nous pilotons vos annonces, optimisons avec les insights IA et envoyons les leads sur votre WhatsApp. (Budget pub directement vers Meta/Google)."
+          }
+        ]
+      }
+    ]
+  },
+  "bundles": {
+    "title": "Les packs « sans hésiter »",
+    "subtitle": "Nos formules les plus demandées pour une transformation digitale complète des entreprises marocaines.",
+    "claim": "Choisir ce pack",
+    "mailtoSubject": "Demande de pack - SMAESI",
+    "items": [
+      {
+        "title": "Pack « Digital Starter »",
+        "price": "12 000 – 20 000 MAD",
+        "emoji": "📦",
+        "perfect": "Idéal pour l'immobilier, les consultants et les services locaux.",
+        "points": [
+          "Site 5 pages ultra-rapide (Next.js)",
+          "1 bot WhatsApp sur mesure pour capter les leads",
+          "SEO de base",
+          "Livré en 2 semaines"
+        ]
+      },
+      {
+        "title": "Pack « Zero-Admin » E-commerce",
+        "price": "25 000 – 45 000 MAD",
+        "emoji": "🛍️",
+        "perfect": "Idéal pour le retail local, l'agritech et les marques D2C.",
+        "points": [
+          "Boutique e-commerce sur mesure",
+          "Suivi automatisé des stocks",
+          "Bot WhatsApp pour suivi des commandes & support client",
+          "Livré en 3 à 4 semaines"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {year} SMAESI — Construit avec Next.js pour le marché marocain.",
+    "tagline": "Des outils digitaux de niveau entreprise — sites, e-commerce et IA WhatsApp — livrés vite."
+  }
+}

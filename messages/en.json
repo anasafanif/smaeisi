@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "title": "SMAESI — AI-Powered Agency for Modern Moroccan Businesses",
+    "description": "Blazing-fast websites, custom e-commerce, and WhatsApp AI bots in days — enterprise-grade tools at local prices."
+  },
+  "locale": {
+    "aria": "Language",
+    "en": "EN",
+    "fr": "FR",
+    "ar": "AR"
+  },
+  "nav": {
+    "whyUs": "Why us",
+    "services": "Services",
+    "bundles": "Bundles"
+  },
+  "header": {
+    "bookAudit": "BOOK AUDIT",
+    "bookAuditMobile": "BOOK FREE AI AUDIT",
+    "menu": "MENU",
+    "close": "CLOSE"
+  },
+  "hero": {
+    "badgeMorocco": "Morocco",
+    "badgeStack": "AI + Next.js",
+    "badgeBots": "WhatsApp bots",
+    "line1": "Grow Faster. Spend Less.",
+    "line2": "The AI-Powered Agency",
+    "line3": "for Modern Moroccan Businesses.",
+    "sub": "We build blazing-fast websites, custom e-commerce platforms, and WhatsApp AI bots in days, not months. Get enterprise-grade digital tools at local prices.",
+    "ctaPrimary": "BOOK YOUR FREE AI AUDIT",
+    "ctaSecondary": "VIEW OUR PACKAGES",
+    "auditSubject": "Free AI Audit",
+    "stat1Value": "3×",
+    "stat1Label": "Faster vs traditional agencies",
+    "stat2Value": "70%",
+    "stat2Label": "Less dev time — savings for you",
+    "stat3Value": "Next.js",
+    "stat3Label": "Millisecond loads, even on 3G"
+  },
+  "whyUs": {
+    "headlinePrefix": "Why pay for a traditional agency when you can have the",
+    "headlineAccent": "AI Advantage",
+    "headlineSuffix": "?",
+    "body": "Moroccan businesses need to move fast. Traditional agencies take months and overcharge. Because our team is powered by the latest AI development tools, we deliver better results, 3x faster, at a fraction of the cost.",
+    "bullets": [
+      {
+        "icon": "⚡",
+        "title": "Blazing Fast Speeds",
+        "body": "We build on modern infrastructure (Next.js) so your site loads in milliseconds, even on a 3G mobile network. No more lost customers."
+      },
+      {
+        "icon": "🤖",
+        "title": "Built-in Intelligence",
+        "body": "We don't just build websites; we give you digital employees. Our WhatsApp bots answer clients and qualify leads 24/7."
+      },
+      {
+        "icon": "💰",
+        "title": "Higher ROI, Lower Costs",
+        "body": "Our AI-accelerated workflow cuts our development time by 70%. We pass those savings directly to you."
+      }
+    ]
+  },
+  "services": {
+    "title": "Transparent Pricing. Scalable Solutions.",
+    "subtitle": "Choose a specialized service, or grab one of our bundled packs to launch immediately.",
+    "blocks": [
+      {
+        "key": "automation",
+        "badge": "🟢 1. AI Automation & WhatsApp Bots",
+        "intro": "Stop wasting time on repetitive tasks. Hire a \"digital employee\" that works 24/7 for the price of an intern.",
+        "items": [
+          {
+            "title": "WhatsApp / IG AI Bot (5,000 – 12,000 MAD)",
+            "desc": "An intelligent bot that speaks Darija/French, answers FAQs, and qualifies leads directly on WhatsApp."
+          },
+          {
+            "title": "Custom Internal CRM (20,000 – 60,000 MAD)",
+            "desc": "Ditch the messy Excel sheets. We build a fast, custom dashboard to track your inventory, leads, and sales automatically."
+          },
+          {
+            "title": "Bot Hosting & Maintenance (From 1,500 MAD/month)",
+            "desc": "Continuous updates and monitoring to ensure your AI is always learning and accurate."
+          }
+        ]
+      },
+      {
+        "key": "web",
+        "badge": "🔵 2. Lightning-Fast Websites & Apps",
+        "intro": "Tired of slow WordPress sites? We build ultra-modern web products designed to rank high on Google and convert visitors into buyers.",
+        "items": [
+          {
+            "title": "Express Vitrine Site (3,500 – 9,000 MAD)",
+            "desc": "A beautiful, high-converting 3-to-5 page website delivered in just days."
+          },
+          {
+            "title": "Full Business Website + SEO (10,000 – 25,000 MAD)",
+            "desc": "Optimized for Google, complete with a blog and lead-capture forms."
+          },
+          {
+            "title": "E-Commerce Platform (15,000 – 40,000 MAD)",
+            "desc": "Sell locally or globally with seamless integration for Moroccan payment gateways (CMI, Cash Plus) or Cash on Delivery (COD) tracking."
+          },
+          {
+            "title": "Custom Mobile App / PWA (35,000+ MAD)",
+            "desc": "Apps your clients can install directly on their phones without the hassle of the App Store."
+          }
+        ]
+      },
+      {
+        "key": "marketing",
+        "badge": "🟣 3. AI-Driven Marketing & Content",
+        "intro": "We don't just get you clicks; we get leads sent directly to your phone.",
+        "items": [
+          {
+            "title": "Branding Package (4,000 – 12,000 MAD)",
+            "desc": "Modern logos, color palettes, and social media templates designed with the latest AI visual tools."
+          },
+          {
+            "title": "AI Marketing Starter (4,000 – 10,000 MAD)",
+            "desc": "Professional setup of your Meta/Google ads and pixel tracking."
+          },
+          {
+            "title": "Monthly Growth Retainer (From 4,000 MAD/month)",
+            "desc": "We manage your ads, optimize campaigns using AI insights, and send leads straight to your WhatsApp. (Ad spend paid directly to Meta/Google)."
+          }
+        ]
+      }
+    ]
+  },
+  "bundles": {
+    "title": "The \"No-Brainer\" Bundles",
+    "subtitle": "Our most popular packages for Moroccan businesses looking for a complete digital transformation.",
+    "claim": "Claim This Pack",
+    "mailtoSubject": "Claim pack - SMAESI",
+    "items": [
+      {
+        "title": "The \"Digital Starter Pack\"",
+        "price": "12,000 – 20,000 MAD",
+        "emoji": "📦",
+        "perfect": "Perfect for real estate, consultants, and local services.",
+        "points": [
+          "Ultra-fast 5-page Website (Next.js)",
+          "1 Custom WhatsApp Lead-Capture Bot",
+          "Basic SEO Setup",
+          "Delivered in 2 Weeks"
+        ]
+      },
+      {
+        "title": "The \"Zero-Admin\" E-Commerce Pack",
+        "price": "25,000 – 45,000 MAD",
+        "emoji": "🛍️",
+        "perfect": "Perfect for local retail, agritech, and D2C brands.",
+        "points": [
+          "Custom E-Commerce Web Store",
+          "Automated Inventory Tracking",
+          "WhatsApp Bot for automatic order tracking & customer support",
+          "Delivered in 3-4 Weeks"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {year} SMAESI — Built with Next.js for the Moroccan market.",
+    "tagline": "Enterprise-grade digital tools — websites, e-commerce, and WhatsApp AI — delivered fast."
+  }
+}
