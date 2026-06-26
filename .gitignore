@@ -17,6 +17,9 @@
 # misc
 .DS_Store
 *.pem
+hyperbolt-index.js
+hyperbolt-index.css
+hyperbolt-source.html
 
 # debug
 npm-debug.log*

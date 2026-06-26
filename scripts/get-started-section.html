@@ -1,0 +1,171 @@
+    <section class="relative z-30 mx-auto w-full max-w-[92rem] px-5 py-24 sm:px-8 lg:px-10 xl:px-12" id="get-started">
+      <div class="mx-auto max-w-2xl text-center mb-12">
+        <p class="text-xs font-medium uppercase tracking-[0.22em] text-violet-300/90">Get started</p>
+        <h2 class="mt-4 text-3xl font-medium tracking-tight text-white sm:text-4xl">
+          Tell us about your project
+        </h2>
+        <p class="mt-4 text-base leading-8 text-slate-400">
+          Reply within 24 hours · Scope call · Start your build
+        </p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-slate-500">
+          Fixed scope · Guaranteed turnaround · No spam
+        </p>
+      </div>
+
+      <div class="mx-auto max-w-xl rounded-[2rem] border border-white/10 bg-[#0a0a0c]/80 p-8 backdrop-blur-2xl">
+        <form id="lead-form" class="space-y-5" novalidate>
+          <div>
+            <label for="lead-name" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Name</label>
+            <input id="lead-name" name="name" type="text" required autocomplete="name" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="Your name">
+          </div>
+          <div>
+            <label for="lead-email" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Email</label>
+            <input id="lead-email" name="email" type="email" required autocomplete="email" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="you@company.com">
+          </div>
+          <div>
+            <label for="lead-phone" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Phone <span class="normal-case text-slate-600">(optional)</span></label>
+            <input id="lead-phone" name="phone" type="tel" autocomplete="tel" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="+212 6XX XXX XXX">
+          </div>
+          <div>
+            <label for="lead-plan" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Package</label>
+            <select id="lead-plan" name="plan" required class="w-full rounded-xl border border-white/10 bg-[#0a0a0c] px-4 py-3 text-sm text-white outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30">
+              <option value="nextjs-engine">High-Performance Next.js Engine — $2.2k</option>
+              <option value="dynamic-web">Dynamic Web &amp; Database Integrations — $3.5k</option>
+              <option value="ai-automation">AI Automation &amp; Webhook Core — $4.8k</option>
+              <option value="enterprise-portals">Enterprise Portals &amp; Payment Pipelines — $6.5k</option>
+              <option value="retainer">Full-Stack Engineering Retainer — from $1.5k/mo</option>
+              <option value="unsure">Not sure yet — help me choose</option>
+            </select>
+          </div>
+          <div>
+            <label for="lead-message" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Project brief</label>
+            <textarea id="lead-message" name="message" required rows="4" class="w-full resize-y rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="What are you building? Timeline, goals, and any links…"></textarea>
+          </div>
+          <button type="submit" id="lead-submit" class="w-full rounded-full border border-violet-300/25 bg-violet-500/15 px-6 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-violet-300/40 hover:bg-violet-500/25 hover:shadow-[0_0_2rem_rgba(139,92,246,0.25)] disabled:cursor-not-allowed disabled:opacity-50">
+            Request my proposal
+          </button>
+          <p id="lead-error" class="hidden text-center text-sm text-red-400" role="alert"></p>
+        </form>
+
+        <div id="lead-success" class="hidden text-center py-6">
+          <p class="text-lg font-medium text-white">Thanks — we&apos;ll reply within 24 hours.</p>
+          <p class="mt-2 text-sm text-slate-400">Prefer faster? Chat with us on WhatsApp.</p>
+          <p id="lead-success-dev" class="hidden mt-3 text-xs text-amber-400/90">Dev note: email was not sent — add RESEND_API_KEY to .env.local and restart the server.</p>
+          <a id="lead-success-wa" href="https://wa.me/212622905838" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-col items-center gap-3 border-t border-white/5 pt-8 sm:flex-row sm:justify-center">
+          <a href="https://wa.me/212622905838?text=Hi%20SMAESI%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/30 bg-[#25D366]/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">
+            WhatsApp
+          </a>
+          <a href="mailto:contact@smaesi.com" class="text-xs font-medium uppercase tracking-[0.16em] text-slate-400 transition hover:text-white">
+            contact@smaesi.com
+          </a>
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          var PLAN_SLUGS = {
+            'nextjs-engine': 'nextjs-engine',
+            'dynamic-web': 'dynamic-web',
+            'ai-automation': 'ai-automation',
+            'enterprise-portals': 'enterprise-portals',
+            'retainer': 'retainer'
+          };
+
+          var WA_BY_PLAN = {
+            'nextjs-engine': 'Hi SMAESI — I\'m interested in the High-Performance Next.js Engine ($2.2k).',
+            'dynamic-web': 'Hi SMAESI — I\'m interested in Dynamic Web & Database Integrations ($3.5k).',
+            'ai-automation': 'Hi SMAESI — I\'m interested in the AI Automation & Webhook Core ($4.8k).',
+            'enterprise-portals': 'Hi SMAESI — I\'m interested in Enterprise Portals & Payment Pipelines ($6.5k).',
+            'retainer': 'Hi SMAESI — I\'m interested in the Full-Stack Engineering Retainer (from $1.5k/mo).'
+          };
+
+          function getPlanFromUrl() {
+            var params = new URLSearchParams(window.location.search);
+            var plan = params.get('plan');
+            if (plan && PLAN_SLUGS[plan]) return plan;
+            var hash = window.location.hash || '';
+            var qIdx = hash.indexOf('?');
+            if (qIdx !== -1) {
+              var hashParams = new URLSearchParams(hash.slice(qIdx + 1));
+              plan = hashParams.get('plan');
+              if (plan && PLAN_SLUGS[plan]) return plan;
+            }
+            return null;
+          }
+
+          function applyPlanFromUrl() {
+            var plan = getPlanFromUrl();
+            var select = document.getElementById('lead-plan');
+            if (!plan || !select) return;
+            select.value = plan;
+            if (window.location.hash.indexOf('get-started') !== -1) {
+              var section = document.getElementById('get-started');
+              if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+
+          applyPlanFromUrl();
+          window.addEventListener('hashchange', applyPlanFromUrl);
+
+          var form = document.getElementById('lead-form');
+          var success = document.getElementById('lead-success');
+          var errorEl = document.getElementById('lead-error');
+          var submitBtn = document.getElementById('lead-submit');
+          var successWa = document.getElementById('lead-success-wa');
+
+          if (!form) return;
+
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            errorEl.classList.add('hidden');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending…';
+
+            var data = {
+              name: form.name.value.trim(),
+              email: form.email.value.trim(),
+              phone: form.phone.value.trim(),
+              plan: form.plan.value,
+              message: form.message.value.trim()
+            };
+
+            fetch('/api/lead', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            })
+              .then(function (res) {
+                return res.json().then(function (body) {
+                  if (!res.ok) throw new Error(body.error || 'Something went wrong');
+                  return body;
+                });
+              })
+              .then(function (body) {
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+                var devNote = document.getElementById('lead-success-dev');
+                if (devNote) {
+                  if (body.logged) devNote.classList.remove('hidden');
+                  else devNote.classList.add('hidden');
+                }
+                var plan = form.plan.value;
+                var text = WA_BY_PLAN[plan] || 'Hi SMAESI, I just submitted a project brief on your website.';
+                if (successWa) {
+                  successWa.href = 'https://wa.me/212622905838?text=' + encodeURIComponent(text);
+                }
+              })
+              .catch(function (err) {
+                errorEl.textContent = err.message || 'Could not send. Try WhatsApp or email instead.';
+                errorEl.classList.remove('hidden');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Request my proposal';
+              });
+          });
+        })();
+      </script>
+    </section>

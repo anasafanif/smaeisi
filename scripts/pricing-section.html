@@ -1,0 +1,286 @@
+    <section class="relative z-30 mx-auto w-full max-w-[92rem] px-5 py-24 sm:px-8 sm:py-32 lg:px-10 xl:px-12 overflow-hidden" id="pricing">
+
+      <style>
+        #pricing .pricing-scroll::-webkit-scrollbar { display: none; }
+        #pricing .pricing-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        #pricing .pricing-card-featured {
+          border-color: rgba(96, 165, 250, 0.35);
+          box-shadow: 0 40px 80px -30px rgba(59, 130, 246, 0.28);
+        }
+      </style>
+
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] pointer-events-none z-0 flex justify-between opacity-30 mix-blend-screen">
+        <div class="w-80 h-80 bg-fuchsia-600/30 rounded-full blur-[120px]"></div>
+        <div class="w-96 h-96 bg-blue-600/30 rounded-full blur-[120px]"></div>
+        <div class="w-80 h-80 bg-violet-600/20 rounded-full blur-[120px]"></div>
+      </div>
+
+      <div class="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[200%] h-[500px] [transform:rotateX(70deg)_translateZ(-200px)] pointer-events-none opacity-40 lg:opacity-60 z-0" style="mask-image: radial-gradient(ellipse at top, black 10%, transparent 60%); -webkit-mask-image: radial-gradient(ellipse at top, black 10%, transparent 60%);">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(139,92,246,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(139,92,246,0.15)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div class="absolute left-1/2 top-0 -translate-x-1/2 w-[800px] h-[800px] bg-blue-500/10 blur-[150px] rounded-full"></div>
+      </div>
+
+      <div class="mx-auto max-w-3xl text-center relative z-20">
+        <p class="text-xs font-medium uppercase tracking-[0.22em] text-violet-300/90">Pricing</p>
+        <h2 class="mt-4 text-4xl font-medium tracking-tight text-white sm:text-5xl drop-shadow-sm">
+          Engineering packages for every stage.
+        </h2>
+        <p class="mt-5 text-base leading-8 text-slate-400">
+          Fixed-scope builds with guaranteed turnaround — or a monthly retainer for ongoing engineering.
+        </p>
+      </div>
+
+      <div id="pricing-carousel" class="relative z-20 mt-16 -mx-5 sm:-mx-8 lg:-mx-10 xl:-mx-12">
+        <div class="absolute left-0 top-0 bottom-0 w-8 md:w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-8 md:w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+
+        <div id="pricing-scroll" class="pricing-scroll flex gap-6 overflow-x-auto px-5 sm:px-8 lg:px-10 py-8 items-stretch cursor-grab active:cursor-grabbing">
+
+          <!-- Card 1 -->
+          <article class="pricing-card shrink-0 w-[20rem] sm:w-[22rem] lg:w-[24rem] flex flex-col rounded-[2rem] border border-white/10 bg-[#0a0a0c]/85 p-7 xl:p-8 backdrop-blur-2xl overflow-hidden group transition-transform duration-500 hover:-translate-y-1">
+            <div class="absolute -top-20 -left-20 w-56 h-56 rounded-full bg-fuchsia-500/10 blur-[70px] group-hover:bg-fuchsia-500/20 transition-colors duration-700 pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col h-full">
+              <div class="mb-5 border-b border-white/5 pb-5">
+                <h3 class="text-xl font-medium tracking-tight text-white leading-snug">High-Performance Next.js Engine</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-400">
+                  For businesses needing a blisteringly fast web core on a pre-selected design layout.
+                </p>
+              </div>
+              <div class="mb-4">
+                <span class="text-4xl font-medium tracking-tight text-white">$2.2k</span>
+                <span class="ml-2 text-xs uppercase tracking-widest text-slate-500">Single payment</span>
+              </div>
+              <p class="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-fuchsia-500/25 bg-fuchsia-500/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-fuchsia-200">
+                <span>3-day turnaround</span>
+              </p>
+              <p class="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-fuchsia-300/80 mb-4">Core deliverables</p>
+              <ul class="space-y-4 flex-1 text-sm leading-relaxed text-slate-400">
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fuchsia-400"></span><span><strong class="font-medium text-slate-200">Static engine architecture</strong> — Next.js App Router with SSG for fast initial loads.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fuchsia-400"></span><span><strong class="font-medium text-slate-200">Core Web Vitals optimization</strong> — Lean bundles and assets targeting 90+ Lighthouse.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fuchsia-400"></span><span><strong class="font-medium text-slate-200">Secure API form handling</strong> — Serverless handlers with robust spam filtering.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fuchsia-400"></span><span><strong class="font-medium text-slate-200">SEO schema injection</strong> — Programmatic JSON-LD across the architecture.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fuchsia-400"></span><span><strong class="font-medium text-slate-200">CDN deployment</strong> — Cloudflare or Vercel edge configuration.</span></li>
+              </ul>
+              <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-5">
+                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20High-Performance%20Next.js%20Engine%20(%242.2k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="#get-started?plan=nextjs-engine" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="pricing-card shrink-0 w-[20rem] sm:w-[22rem] lg:w-[24rem] flex flex-col rounded-[2rem] border border-white/10 bg-[#0a0a0c]/85 p-7 xl:p-8 backdrop-blur-2xl overflow-hidden group transition-transform duration-500 hover:-translate-y-1">
+            <div class="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-cyan-500/10 blur-[70px] group-hover:bg-cyan-500/20 transition-colors duration-700 pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col h-full">
+              <div class="mb-5 border-b border-white/5 pb-5">
+                <h3 class="text-xl font-medium tracking-tight text-white leading-snug">Dynamic Web &amp; Database Integrations</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-400">
+                  For database-backed portals, dynamic pages, and third-party data sync.
+                </p>
+              </div>
+              <div class="mb-4">
+                <span class="text-4xl font-medium tracking-tight text-white">$3.5k</span>
+                <span class="ml-2 text-xs uppercase tracking-widest text-slate-500">Single payment</span>
+              </div>
+              <p class="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-cyan-500/25 bg-cyan-500/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-cyan-200">
+                <span>4-day turnaround</span>
+              </p>
+              <p class="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-cyan-300/80 mb-4">Core deliverables</p>
+              <ul class="space-y-4 flex-1 text-sm leading-relaxed text-slate-400">
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span><span><strong class="font-medium text-slate-200">Relational database architecture</strong> — PostgreSQL or Supabase via Prisma ORM.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span><span><strong class="font-medium text-slate-200">Server-side rendering (SSR)</strong> — Server Actions for live, secure dynamic data.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span><span><strong class="font-medium text-slate-200">API middleware pipelines</strong> — Calendars, scheduling, and transactional email integrations.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span><span><strong class="font-medium text-slate-200">Server-side event tracking</strong> — GTM and server-side analytics mapping.</span></li>
+              </ul>
+              <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-5">
+                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20Dynamic%20Web%20%26%20Database%20Integrations%20(%243.5k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="#get-started?plan=dynamic-web" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 — Most Popular -->
+          <article class="pricing-card pricing-card-featured shrink-0 w-[21rem] sm:w-[23rem] lg:w-[26rem] flex flex-col rounded-[2rem] border border-blue-400/30 bg-[#0c101a]/90 p-8 xl:p-9 backdrop-blur-2xl overflow-hidden group transition-transform duration-500 hover:-translate-y-1 scale-[1.02]">
+            <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-blue-500/15 blur-[90px] pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col h-full">
+              <div class="mb-5 border-b border-blue-500/20 pb-5">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <h3 class="text-xl font-medium tracking-tight text-white leading-snug">AI Automation &amp; Webhook Core</h3>
+                  <span class="inline-flex items-center gap-2 rounded-full border border-blue-400/40 bg-blue-500/10 px-2.5 py-1 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-blue-200">
+                    <span class="relative flex h-1.5 w-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-400"></span></span>
+                    Most popular
+                  </span>
+                </div>
+                <p class="text-sm leading-6 text-slate-300">
+                  For teams integrating automated localized channels and sales funnel routing.
+                </p>
+              </div>
+              <div class="mb-4">
+                <span class="text-5xl font-medium tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-blue-200">$4.8k</span>
+                <span class="ml-2 text-xs uppercase tracking-widest text-slate-400">Single payment</span>
+              </div>
+              <p class="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-blue-200">
+                <span>5-day turnaround</span>
+              </p>
+              <p class="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-blue-300/90 mb-4">Core deliverables</p>
+              <ul class="space-y-4 flex-1 text-sm leading-relaxed text-slate-300">
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="font-medium text-white">Everything in Dynamic Web &amp; Database</strong></span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="font-medium text-slate-100">RAG AI assistant</strong> — pgvector semantic search over your company documents.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="font-medium text-slate-100">WhatsApp / Instagram Cloud API</strong> — Meta webhooks to route user queries.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="font-medium text-slate-100">Multi-language classification</strong> — English, Arabic (Classic/Gulf), and French routing.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="font-medium text-slate-100">Automated CRM sync</strong> — Chat conversations pushed to your CRM.</span></li>
+              </ul>
+              <div class="mt-8 flex flex-col gap-3 border-t border-blue-500/20 pt-5">
+                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20AI%20Automation%20%26%20Webhook%20Core%20(%244.8k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="#get-started?plan=ai-automation" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="pricing-card shrink-0 w-[20rem] sm:w-[22rem] lg:w-[24rem] flex flex-col rounded-[2rem] border border-white/10 bg-[#0a0a0c]/85 p-7 xl:p-8 backdrop-blur-2xl overflow-hidden group transition-transform duration-500 hover:-translate-y-1">
+            <div class="absolute -bottom-20 -left-20 w-56 h-56 rounded-full bg-violet-500/10 blur-[70px] group-hover:bg-violet-500/20 transition-colors duration-700 pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col h-full">
+              <div class="mb-5 border-b border-white/5 pb-5">
+                <h3 class="text-xl font-medium tracking-tight text-white leading-snug">Enterprise Portals &amp; Payment Pipelines</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-400">
+                  For platforms processing payments, user databases, or internal staff dashboards.
+                </p>
+              </div>
+              <div class="mb-4">
+                <span class="text-4xl font-medium tracking-tight text-white">$6.5k</span>
+                <span class="ml-2 text-xs uppercase tracking-widest text-slate-500">Single payment</span>
+              </div>
+              <p class="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-violet-500/25 bg-violet-500/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-violet-200">
+                <span>7-day turnaround</span>
+              </p>
+              <p class="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-violet-300/80 mb-4">Core deliverables</p>
+              <ul class="space-y-4 flex-1 text-sm leading-relaxed text-slate-400">
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span><span><strong class="font-medium text-slate-200">Everything in AI Automation &amp; Webhook Core</strong></span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span><span><strong class="font-medium text-slate-200">Secure auth &amp; sessions</strong> — MFA and persistence via Clerk or Auth.js.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span><span><strong class="font-medium text-slate-200">Role-based access control</strong> — Admin panel for staff, access, and logs.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span><span><strong class="font-medium text-slate-200">Payment webhooks</strong> — Stripe and regional gateways synced to order state.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span><span><strong class="font-medium text-slate-200">System hardening</strong> — CORS, SQL injection protection, and rate limiting.</span></li>
+              </ul>
+              <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-5">
+                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20Enterprise%20Portals%20%26%20Payment%20Pipelines%20(%246.5k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="#get-started?plan=enterprise-portals" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="pricing-card shrink-0 w-[20rem] sm:w-[22rem] lg:w-[24rem] flex flex-col rounded-[2rem] border border-white/10 bg-[#0a0a0c]/85 p-7 xl:p-8 backdrop-blur-2xl overflow-hidden group transition-transform duration-500 hover:-translate-y-1">
+            <div class="absolute -bottom-20 -right-20 w-56 h-56 rounded-full bg-slate-400/10 blur-[70px] group-hover:bg-slate-400/20 transition-colors duration-700 pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col h-full">
+              <div class="mb-5 border-b border-white/5 pb-5">
+                <h3 class="text-xl font-medium tracking-tight text-white leading-snug">Full-Stack Engineering Retainer</h3>
+                <p class="mt-3 text-sm leading-6 text-slate-400">
+                  For ongoing feature development, infrastructure monitoring, and database management.
+                </p>
+              </div>
+              <div class="mb-4">
+                <span class="text-3xl font-medium tracking-tight text-white">Custom retainer</span>
+                <p class="mt-1 text-xs text-slate-500">Starting at $1.5k/month</p>
+              </div>
+              <p class="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-slate-500/25 bg-slate-400/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-slate-300">
+                <span>Weekly engineering sprints</span>
+              </p>
+              <p class="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-slate-400/80 mb-4">Core deliverables</p>
+              <ul class="space-y-4 flex-1 text-sm leading-relaxed text-slate-400">
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300"></span><span><strong class="font-medium text-slate-200">PWA packaging</strong> — Service workers and offline caching for app-like UX.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300"></span><span><strong class="font-medium text-slate-200">CI/CD maintenance</strong> — GitHub Actions for zero-downtime hotfixes.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300"></span><span><strong class="font-medium text-slate-200">Horizontal scalability</strong> — Pooling, Redis caching, and load balancers.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300"></span><span><strong class="font-medium text-slate-200">Ongoing AI &amp; LLM engineering</strong> — Vector index maintenance and prompt tuning.</span></li>
+                <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300"></span><span><strong class="font-medium text-slate-200">Automated recovery</strong> — Daily DB snapshots, log aggregation, and recovery scripts.</span></li>
+              </ul>
+              <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-5">
+                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20Full-Stack%20Engineering%20Retainer%20(from%20%241.5k%2Fmo)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="#get-started?plan=retainer" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          const wrap = document.getElementById('pricing-carousel');
+          const slider = document.getElementById('pricing-scroll');
+          if (!wrap || !slider) return;
+
+          const EDGE = 0.2;
+          let direction = 0;
+          let isDown = false;
+          let startX = 0;
+          let scrollLeft = 0;
+          let rafId = 0;
+
+          const maxScroll = function () {
+            return Math.max(0, slider.scrollWidth - slider.clientWidth);
+          };
+
+          const tick = function () {
+            if (direction !== 0 && !isDown) {
+              const next = slider.scrollLeft + direction;
+              slider.scrollLeft = Math.max(0, Math.min(maxScroll(), next));
+              if (slider.scrollLeft <= 0 && direction < 0) direction = 0;
+              if (slider.scrollLeft >= maxScroll() && direction > 0) direction = 0;
+            }
+            rafId = requestAnimationFrame(tick);
+          };
+
+          wrap.addEventListener('mousemove', function (e) {
+            if (isDown) {
+              direction = 0;
+              return;
+            }
+            const rect = wrap.getBoundingClientRect();
+            const ratio = (e.clientX - rect.left) / rect.width;
+            if (ratio < EDGE) {
+              const intensity = 1 - ratio / EDGE;
+              direction = -(1.5 + intensity * 5.5);
+            } else if (ratio > 1 - EDGE) {
+              const intensity = (ratio - (1 - EDGE)) / EDGE;
+              direction = 1.5 + intensity * 5.5;
+            } else {
+              direction = 0;
+            }
+          });
+
+          wrap.addEventListener('mouseleave', function () {
+            direction = 0;
+            isDown = false;
+            slider.style.cursor = 'grab';
+          });
+
+          slider.addEventListener('mousedown', function (e) {
+            isDown = true;
+            direction = 0;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            slider.style.cursor = 'grabbing';
+          });
+
+          window.addEventListener('mouseup', function () {
+            if (!isDown) return;
+            isDown = false;
+            slider.style.cursor = 'grab';
+          });
+
+          slider.addEventListener('mousemove', function (e) {
+            if (!isDown) return;
+            e.preventDefault();
+            slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 1.2;
+          });
+
+          rafId = requestAnimationFrame(tick);
+
+          window.addEventListener('pagehide', function () {
+            cancelAnimationFrame(rafId);
+          });
+        })();
+      </script>
+
+    </section>

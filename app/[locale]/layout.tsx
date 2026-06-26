@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { LangDirSetter } from "@/components/i18n/LangDirSetter";
@@ -17,14 +17,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
   return {
-    title: t("title"),
-    description: t("description"),
+    title: "Hyperbolt Digital — Digital Agency & SaaS Landing",
+    description:
+      "A high-performance digital product and brand studio template designed to showcase services, portfolios, and agency capabilities with immersive 3D elements.",
     openGraph: {
-      title: "SMAESI",
-      description: t("description"),
-      locale: locale === "fr" ? "fr_MA" : locale === "ar" ? "ar_MA" : "en_MA",
+      title: "Hyperbolt Digital",
+      description:
+        "Digital products. Real impact. Strategy, design, engineering, and optimization in one focused growth system.",
+      locale: locale === "fr" ? "fr_FR" : locale === "ar" ? "ar_MA" : "en_US",
       type: "website",
     },
   };

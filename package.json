@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/prepare-hyperbolt.mjs && next build",
+    "prepare:hyperbolt": "node scripts/prepare-hyperbolt.mjs",
     "start": "next start",
     "lint": "next lint"
   },

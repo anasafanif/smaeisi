@@ -23,6 +23,10 @@ const notoArabic = Noto_Sans_Arabic({
 export const metadata: Metadata = {
   title: "SMAESI",
   description: "AI-powered digital agency for Moroccan businesses.",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({
@@ -35,7 +39,7 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrains.variable} ${notoArabic.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background font-sans text-white antialiased overflow-x-hidden selection:bg-primary selection:text-background">
+      <body className="m-0 min-h-screen overflow-hidden bg-black antialiased">
         {children}
       </body>
     </html>

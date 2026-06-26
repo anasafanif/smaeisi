@@ -11,7 +11,7 @@ type BundleItem = {
 export async function Bundles() {
   const t = await getTranslations("bundles");
   const items = t.raw("items") as BundleItem[];
-  const mail = `mailto:hello@smaesi.com?subject=${encodeURIComponent(t("mailtoSubject"))}`;
+  const mail = `mailto:contact@smaesi.com?subject=${encodeURIComponent(t("mailtoSubject"))}`;
 
   return (
     <section id="bundles" className="relative scroll-mt-24 border-t border-white/5 py-24">

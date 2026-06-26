@@ -106,7 +106,7 @@ export function Hero() {
     return () => window.clearTimeout(tmr);
   }, [locale]);
 
-  const auditHref = `mailto:hello@smaesi.com?subject=${encodeURIComponent(t("auditSubject"))}`;
+  const auditHref = `mailto:contact@smaesi.com?subject=${encodeURIComponent(t("auditSubject"))}`;
 
   return (
     <section
