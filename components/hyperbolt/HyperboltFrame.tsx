@@ -8,7 +8,7 @@ export function HyperboltFrame() {
   return (
     <iframe
       src="/hyperbolt/index.html"
-      title="Hyperbolt Digital"
+      title="SMAESI"
       className="block h-[100dvh] w-full border-0 bg-black"
       loading="eager"
     />

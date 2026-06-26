@@ -675,22 +675,77 @@ gtag('config', 'G-2M6V79H761');
     </a>
   </nav>
 
-  <a href="#get-started" class="group hidden items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-semibold uppercase tracking-[0.17em] text-white backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:border-violet-400/40 hover:bg-violet-500/10 hover:shadow-[0_0_2rem_rgba(139,92,246,0.25)] sm:flex">
-    LET'S CREATE
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+  <div class="flex items-center gap-2 sm:gap-3">
+  <a href="#get-started" class="group flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:border-violet-400/40 hover:bg-violet-500/10 hover:shadow-[0_0_2rem_rgba(139,92,246,0.25)] sm:gap-2 sm:px-5 sm:py-3 sm:text-xs sm:tracking-[0.17em]">
+    <span class="hidden min-[380px]:inline">LET'S CREATE</span>
+    <span class="min-[380px]:hidden">START</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
       <path d="M7 7h10v10"></path>
       <path d="M7 17 17 7"></path>
     </svg>
   </a>
 
-  <button class="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white backdrop-blur-xl lg:hidden" aria-label="Open menu">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+  <button id="mobile-menu-btn" type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white backdrop-blur-xl lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
       <path d="M4 5h16"></path>
       <path d="M4 12h16"></path>
       <path d="M4 19h16"></path>
     </svg>
   </button>
+  </div>
 </header>
+
+<div id="mobile-nav" class="fixed inset-0 z-[90] hidden lg:hidden" aria-hidden="true">
+  <div id="mobile-nav-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+  <nav class="absolute right-0 top-0 flex h-full w-[min(100%,20rem)] flex-col border-l border-white/10 bg-[#0a0a0c]/95 px-6 py-8 backdrop-blur-2xl" aria-label="Mobile navigation">
+    <div class="mb-8 flex items-center justify-between">
+      <span class="text-xs font-semibold uppercase tracking-[0.22em] text-violet-300">Menu</span>
+      <button id="mobile-nav-close" type="button" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <div class="flex flex-col gap-2 text-sm font-medium uppercase tracking-[0.16em]">
+      <a href="#work" class="mobile-nav-link rounded-xl px-4 py-3 text-slate-300 transition hover:bg-white/[0.05] hover:text-white">Work</a>
+      <a href="#services" class="mobile-nav-link rounded-xl px-4 py-3 text-slate-300 transition hover:bg-white/[0.05] hover:text-white">Services</a>
+      <a href="#pricing" class="mobile-nav-link rounded-xl px-4 py-3 text-slate-300 transition hover:bg-white/[0.05] hover:text-white">Pricing</a>
+      <a href="#get-started" class="mobile-nav-link mt-2 rounded-full border border-violet-300/25 bg-violet-500/15 px-4 py-3 text-center text-white transition hover:bg-violet-500/25">Get started</a>
+    </div>
+  </nav>
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('mobile-menu-btn');
+    var panel = document.getElementById('mobile-nav');
+    var closeBtn = document.getElementById('mobile-nav-close');
+    var backdrop = document.getElementById('mobile-nav-backdrop');
+    if (!btn || !panel) return;
+
+    function openMenu() {
+      panel.classList.remove('hidden');
+      panel.setAttribute('aria-hidden', 'false');
+      btn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      panel.classList.add('hidden');
+      panel.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (backdrop) backdrop.addEventListener('click', closeMenu);
+    panel.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !panel.classList.contains('hidden')) closeMenu();
+    });
+  })();
+</script>
 
     <section class="grid min-h-[calc(100vh-7rem)] grid-cols-1 sm:px-8 sm:pt-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-4 lg:px-10 lg:pb-6 lg:pt-10 xl:px-12 w-full max-w-[92rem] z-20 mr-auto ml-auto pt-12 pr-5 pb-10 pl-5 relative gap-x-12 gap-y-12 items-center">
       <div class="pointer-events-none absolute inset-0 z-0" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.82) 34%, rgba(0,0,0,0.22) 62%, rgba(0,0,0,0.08) 100%), url('https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e04d3e4d-8705-4b52-973b-f886f528af69_1600w.png'); background-size: cover; background-position: center right; background-repeat: no-repeat;; overflow:hidden; isolation:isolate">
@@ -701,7 +756,7 @@ gtag('config', 'G-2M6V79H761');
           <span class="h-px w-9 bg-violet-500"></span>
           Digital products. real impact.
         </p>
-        <h1 class="max-w-4xl text-5xl font-medium uppercase tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-[5.35rem] xl:leading-[0.95]">
+        <h1 class="max-w-4xl text-4xl font-medium uppercase tracking-tight text-white sm:text-5xl lg:text-7xl xl:text-[5.35rem] xl:leading-[0.95]">
           <span class="line-animate-1 block">We build</span>
           <span class="line-animate-2 block">digital products</span>
           <span class="line-animate-3 block">
@@ -1636,7 +1691,7 @@ gtag('config', 'G-2M6V79H761');
             <div class="h-px w-10 bg-violet-500/50"></div>
           </div>
 
-          <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[0.9] uppercase mb-10 drop-shadow-lg">
+          <h2 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white leading-[0.9] uppercase mb-10 drop-shadow-lg">
             Services that
             <br>
             <span class="text-violet-400 drop-shadow-[0_0_25px_rgba(167,139,250,0.4)]">
@@ -2253,7 +2308,7 @@ gtag('config', 'G-2M6V79H761');
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-fuchsia-400"></span><span><strong class="font-medium text-slate-200">CDN deployment</strong> — Cloudflare or Vercel edge configuration.</span></li>
               </ul>
               <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-5">
-                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20High-Performance%20Next.js%20Engine%20(%242.2k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="https://wa.me/212634561364?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20High-Performance%20Next.js%20Engine%20(%242.2k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
                 <a href="#get-started?plan=nextjs-engine" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
               </div>
             </div>
@@ -2284,7 +2339,7 @@ gtag('config', 'G-2M6V79H761');
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span><span><strong class="font-medium text-slate-200">Server-side event tracking</strong> — GTM and server-side analytics mapping.</span></li>
               </ul>
               <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-5">
-                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20Dynamic%20Web%20%26%20Database%20Integrations%20(%243.5k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="https://wa.me/212634561364?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20Dynamic%20Web%20%26%20Database%20Integrations%20(%243.5k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
                 <a href="#get-started?plan=dynamic-web" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
               </div>
             </div>
@@ -2322,7 +2377,7 @@ gtag('config', 'G-2M6V79H761');
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="font-medium text-slate-100">Automated CRM sync</strong> — Chat conversations pushed to your CRM.</span></li>
               </ul>
               <div class="mt-8 flex flex-col gap-3 border-t border-blue-500/20 pt-5">
-                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20AI%20Automation%20%26%20Webhook%20Core%20(%244.8k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="https://wa.me/212634561364?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20AI%20Automation%20%26%20Webhook%20Core%20(%244.8k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
                 <a href="#get-started?plan=ai-automation" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
               </div>
             </div>
@@ -2354,7 +2409,7 @@ gtag('config', 'G-2M6V79H761');
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400"></span><span><strong class="font-medium text-slate-200">System hardening</strong> — CORS, SQL injection protection, and rate limiting.</span></li>
               </ul>
               <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-5">
-                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20Enterprise%20Portals%20%26%20Payment%20Pipelines%20(%246.5k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="https://wa.me/212634561364?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20Enterprise%20Portals%20%26%20Payment%20Pipelines%20(%246.5k)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
                 <a href="#get-started?plan=enterprise-portals" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
               </div>
             </div>
@@ -2386,7 +2441,7 @@ gtag('config', 'G-2M6V79H761');
                 <li class="flex gap-3"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-300"></span><span><strong class="font-medium text-slate-200">Automated recovery</strong> — Daily DB snapshots, log aggregation, and recovery scripts.</span></li>
               </ul>
               <div class="mt-8 flex flex-col gap-3 border-t border-white/5 pt-5">
-                <a href="https://wa.me/212622905838?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20Full-Stack%20Engineering%20Retainer%20(from%20%241.5k%2Fmo)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
+                <a href="https://wa.me/212634561364?text=Hi%20SMAESI%20%E2%80%94%20I%27m%20interested%20in%20the%20Full-Stack%20Engineering%20Retainer%20(from%20%241.5k%2Fmo)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">Chat on WhatsApp</a>
                 <a href="#get-started?plan=retainer" class="text-center text-xs font-medium uppercase tracking-[0.14em] text-slate-400 transition hover:text-white">Send project brief</a>
               </div>
             </div>
@@ -2478,6 +2533,7 @@ gtag('config', 'G-2M6V79H761');
     
     
     
+    
     <section class="relative z-30 mx-auto w-full max-w-[92rem] px-5 py-24 sm:px-8 lg:px-10 xl:px-12" id="get-started">
       <div class="mx-auto max-w-2xl text-center mb-12">
         <p class="text-xs font-medium uppercase tracking-[0.22em] text-violet-300/90">Get started</p>
@@ -2496,19 +2552,19 @@ gtag('config', 'G-2M6V79H761');
         <form id="lead-form" class="space-y-5" novalidate>
           <div>
             <label for="lead-name" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Name</label>
-            <input id="lead-name" name="name" type="text" required autocomplete="name" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="Your name">
+            <input id="lead-name" name="name" type="text" required autocomplete="name" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-base text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="Your name">
           </div>
           <div>
             <label for="lead-email" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Email</label>
-            <input id="lead-email" name="email" type="email" required autocomplete="email" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="you@company.com">
+            <input id="lead-email" name="email" type="email" required autocomplete="email" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-base text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="you@company.com">
           </div>
           <div>
             <label for="lead-phone" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Phone <span class="normal-case text-slate-600">(optional)</span></label>
-            <input id="lead-phone" name="phone" type="tel" autocomplete="tel" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="+212 6XX XXX XXX">
+            <input id="lead-phone" name="phone" type="tel" autocomplete="tel" class="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-base text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="+212 6XX XXX XXX">
           </div>
           <div>
             <label for="lead-plan" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Package</label>
-            <select id="lead-plan" name="plan" required class="w-full rounded-xl border border-white/10 bg-[#0a0a0c] px-4 py-3 text-sm text-white outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30">
+            <select id="lead-plan" name="plan" required class="w-full rounded-xl border border-white/10 bg-[#0a0a0c] px-4 py-3 text-base text-white outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30">
               <option value="nextjs-engine">High-Performance Next.js Engine — $2.2k</option>
               <option value="dynamic-web">Dynamic Web &amp; Database Integrations — $3.5k</option>
               <option value="ai-automation">AI Automation &amp; Webhook Core — $4.8k</option>
@@ -2519,25 +2575,24 @@ gtag('config', 'G-2M6V79H761');
           </div>
           <div>
             <label for="lead-message" class="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-slate-400">Project brief</label>
-            <textarea id="lead-message" name="message" required rows="4" class="w-full resize-y rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="What are you building? Timeline, goals, and any links…"></textarea>
+            <textarea id="lead-message" name="message" required rows="4" class="w-full resize-y rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-base text-white placeholder:text-slate-600 outline-none transition focus:border-violet-400/40 focus:ring-1 focus:ring-violet-400/30" placeholder="What are you building? Timeline, goals, and any links…"></textarea>
           </div>
-          <button type="submit" id="lead-submit" class="w-full rounded-full border border-violet-300/25 bg-violet-500/15 px-6 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-white transition hover:border-violet-300/40 hover:bg-violet-500/25 hover:shadow-[0_0_2rem_rgba(139,92,246,0.25)] disabled:cursor-not-allowed disabled:opacity-50">
-            Request my proposal
+          <button type="submit" id="lead-submit" class="w-full rounded-full border border-[#25D366]/40 bg-[#25D366]/15 px-6 py-4 text-xs font-semibold uppercase tracking-[0.16em] text-[#25D366] transition hover:border-[#25D366]/55 hover:bg-[#25D366]/25 hover:shadow-[0_0_2rem_rgba(37,211,102,0.2)] disabled:cursor-not-allowed disabled:opacity-50">
+            Send via WhatsApp
           </button>
           <p id="lead-error" class="hidden text-center text-sm text-red-400" role="alert"></p>
         </form>
 
         <div id="lead-success" class="hidden text-center py-6">
-          <p class="text-lg font-medium text-white">Thanks — we&apos;ll reply within 24 hours.</p>
-          <p class="mt-2 text-sm text-slate-400">Prefer faster? Chat with us on WhatsApp.</p>
-          <p id="lead-success-dev" class="hidden mt-3 text-xs text-amber-400/90">Dev note: email was not sent — add RESEND_API_KEY to .env.local and restart the server.</p>
-          <a id="lead-success-wa" href="https://wa.me/212622905838" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">
+          <p class="text-lg font-medium text-white">Thanks — your brief is ready in WhatsApp.</p>
+          <p class="mt-2 text-sm text-slate-400">Tap below if the chat didn&apos;t open automatically.</p>
+          <a id="lead-success-wa" href="https://wa.me/212634561364" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">
             Chat on WhatsApp
           </a>
         </div>
 
         <div class="mt-8 flex flex-col items-center gap-3 border-t border-white/5 pt-8 sm:flex-row sm:justify-center">
-          <a href="https://wa.me/212622905838?text=Hi%20SMAESI%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/30 bg-[#25D366]/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">
+          <a href="https://wa.me/212634561364?text=Hi%20SMAESI%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/30 bg-[#25D366]/10 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#25D366] transition hover:bg-[#25D366]/20">
             WhatsApp
           </a>
           <a href="mailto:contact@smaesi.com" class="text-xs font-medium uppercase tracking-[0.16em] text-slate-400 transition hover:text-white">
@@ -2548,20 +2603,14 @@ gtag('config', 'G-2M6V79H761');
 
       <script>
         (function () {
+          var WHATSAPP_NUMBER = '212634561364';
+
           var PLAN_SLUGS = {
             'nextjs-engine': 'nextjs-engine',
             'dynamic-web': 'dynamic-web',
             'ai-automation': 'ai-automation',
             'enterprise-portals': 'enterprise-portals',
             'retainer': 'retainer'
-          };
-
-          var WA_BY_PLAN = {
-            'nextjs-engine': 'Hi SMAESI — I\'m interested in the High-Performance Next.js Engine ($2.2k).',
-            'dynamic-web': 'Hi SMAESI — I\'m interested in Dynamic Web & Database Integrations ($3.5k).',
-            'ai-automation': 'Hi SMAESI — I\'m interested in the AI Automation & Webhook Core ($4.8k).',
-            'enterprise-portals': 'Hi SMAESI — I\'m interested in Enterprise Portals & Payment Pipelines ($6.5k).',
-            'retainer': 'Hi SMAESI — I\'m interested in the Full-Stack Engineering Retainer (from $1.5k/mo).'
           };
 
           function getPlanFromUrl() {
@@ -2589,6 +2638,32 @@ gtag('config', 'G-2M6V79H761');
             }
           }
 
+          function getPlanLabel(selectEl) {
+            if (!selectEl || selectEl.selectedIndex < 0) return '';
+            return selectEl.options[selectEl.selectedIndex].text;
+          }
+
+          function buildWhatsAppMessage(data, planLabel) {
+            return [
+              'Hi SMAESI — I\'d like a proposal.',
+              '',
+              'Name: ' + data.name,
+              'Email: ' + data.email,
+              'Phone: ' + (data.phone || 'not provided'),
+              'Package: ' + planLabel,
+              '',
+              'Brief:',
+              data.message
+            ].join('\n');
+          }
+
+          function openWhatsApp(url) {
+            var opened = window.open(url, '_blank');
+            if (!opened) {
+              window.location.href = url;
+            }
+          }
+
           applyPlanFromUrl();
           window.addEventListener('hashchange', applyPlanFromUrl);
 
@@ -2603,8 +2678,6 @@ gtag('config', 'G-2M6V79H761');
           form.addEventListener('submit', function (e) {
             e.preventDefault();
             errorEl.classList.add('hidden');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending…';
 
             var data = {
               name: form.name.value.trim(),
@@ -2614,41 +2687,29 @@ gtag('config', 'G-2M6V79H761');
               message: form.message.value.trim()
             };
 
-            fetch('/api/lead', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(data)
-            })
-              .then(function (res) {
-                return res.json().then(function (body) {
-                  if (!res.ok) throw new Error(body.error || 'Something went wrong');
-                  return body;
-                });
-              })
-              .then(function (body) {
-                form.classList.add('hidden');
-                success.classList.remove('hidden');
-                var devNote = document.getElementById('lead-success-dev');
-                if (devNote) {
-                  if (body.logged) devNote.classList.remove('hidden');
-                  else devNote.classList.add('hidden');
-                }
-                var plan = form.plan.value;
-                var text = WA_BY_PLAN[plan] || 'Hi SMAESI, I just submitted a project brief on your website.';
-                if (successWa) {
-                  successWa.href = 'https://wa.me/212622905838?text=' + encodeURIComponent(text);
-                }
-              })
-              .catch(function (err) {
-                errorEl.textContent = err.message || 'Could not send. Try WhatsApp or email instead.';
-                errorEl.classList.remove('hidden');
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Request my proposal';
-              });
+            if (!data.name || !data.email || !data.plan || !data.message) {
+              errorEl.textContent = 'Please fill in all required fields.';
+              errorEl.classList.remove('hidden');
+              return;
+            }
+
+            var planLabel = getPlanLabel(form.plan);
+            var text = buildWhatsAppMessage(data, planLabel);
+            var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
+
+            openWhatsApp(url);
+
+            form.classList.add('hidden');
+            success.classList.remove('hidden');
+            if (successWa) {
+              successWa.href = url;
+            }
           });
         })();
       </script>
     </section>
+
+    
 
     
 
@@ -2846,11 +2907,11 @@ gtag('config', 'G-2M6V79H761');
 
 
 <a
-  href="https://wa.me/212622905838"
+  href="https://wa.me/212634561364"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Chat on WhatsApp"
-  class="fixed bottom-6 right-6 z-[100] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_24px_rgba(37,211,102,0.45)] transition-transform duration-300 hover:scale-110 hover:shadow-[0_6px_32px_rgba(37,211,102,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+  class="fixed bottom-4 right-4 z-[100] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_24px_rgba(37,211,102,0.45)] transition-transform duration-300 hover:scale-110 hover:shadow-[0_6px_32px_rgba(37,211,102,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:bottom-6 sm:right-6 mb-[env(safe-area-inset-bottom)] mr-[env(safe-area-inset-right)]"
 >
   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>

@@ -18,11 +18,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: "Hyperbolt Digital — Digital Agency & SaaS Landing",
+    title: "SMAESI — Digital Studio",
     description:
-      "A high-performance digital product and brand studio template designed to showcase services, portfolios, and agency capabilities with immersive 3D elements.",
+      "We build high-performance digital products for ambitious brands. Strategy, design, and engineering in one focused growth system.",
     openGraph: {
-      title: "Hyperbolt Digital",
+      title: "SMAESI",
       description:
         "Digital products. Real impact. Strategy, design, engineering, and optimization in one focused growth system.",
       locale: locale === "fr" ? "fr_FR" : locale === "ar" ? "ar_MA" : "en_US",

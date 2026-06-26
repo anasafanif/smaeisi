@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { WHATSAPP_NUMBER } from "./site-config.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const input = path.join(root, "hyperbolt-template.html");
@@ -32,6 +33,8 @@ if (!html.includes("<title>")) {
     '<head>\n    <title>Hyperbolt Digital</title>',
   );
 }
+
+html = html.replace(/212622905838/g, WHATSAPP_NUMBER);
 
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(output, html, "utf8");
