@@ -610,7 +610,7 @@ gtag('config', 'G-2M6V79H761');
 </style></head>
 
 <body class="min-h-screen overflow-x-hidden bg-black text-white" style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-  <main class="relative min-h-screen overflow-hidden bg-black">
+  <main class="relative min-h-screen overflow-x-hidden bg-black">
     <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.74)_100%)]">
     </div>
     <div class="pointer-events-none absolute inset-0 opacity-[0.045] mix-blend-screen" style="background-image: linear-gradient(rgba(255,255,255,0.7) 0.0625rem, transparent 0.0625rem), linear-gradient(90deg, rgba(255,255,255,0.7) 0.0625rem, transparent 0.0625rem); background-size: 4rem 4rem;">
@@ -685,6 +685,12 @@ gtag('config', 'G-2M6V79H761');
     </svg>
   </a>
 
+  <nav id="locale-switcher" class="hidden min-[480px]:flex items-center gap-0.5 rounded-full border border-white/[0.08] bg-white/[0.035] p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl" aria-label="Language" dir="ltr">
+    <a href="/" target="_top" data-locale-link="en" class="smaesi-locale-link rounded-full px-2.5 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-slate-400 transition-all duration-300 hover:bg-white/[0.05] hover:text-white sm:px-3 sm:text-xs">EN</a>
+    <a href="/fr" target="_top" data-locale-link="fr" class="smaesi-locale-link rounded-full px-2.5 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-slate-400 transition-all duration-300 hover:bg-white/[0.05] hover:text-white sm:px-3 sm:text-xs">FR</a>
+    <a href="/ar" target="_top" data-locale-link="ar" class="smaesi-locale-link rounded-full px-2.5 py-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-slate-400 transition-all duration-300 hover:bg-white/[0.05] hover:text-white sm:px-3 sm:text-xs">AR</a>
+  </nav>
+
   <button id="mobile-menu-btn" type="button" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] text-white backdrop-blur-xl lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true">
       <path d="M4 5h16"></path>
@@ -709,6 +715,11 @@ gtag('config', 'G-2M6V79H761');
       <a href="#services" class="mobile-nav-link rounded-xl px-4 py-3 text-slate-300 transition hover:bg-white/[0.05] hover:text-white">Services</a>
       <a href="#pricing" class="mobile-nav-link rounded-xl px-4 py-3 text-slate-300 transition hover:bg-white/[0.05] hover:text-white">Pricing</a>
       <a href="#get-started" class="mobile-nav-link mt-2 rounded-full border border-violet-300/25 bg-violet-500/15 px-4 py-3 text-center text-white transition hover:bg-violet-500/25">Get started</a>
+      <nav class="mt-6 flex items-center justify-center gap-0.5 rounded-full border border-white/[0.08] bg-white/[0.035] p-1 backdrop-blur-xl min-[480px]:hidden" aria-label="Language" dir="ltr">
+        <a href="/" target="_top" data-locale-link="en" class="smaesi-locale-link rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400 transition-all duration-300 hover:bg-white/[0.05] hover:text-white">EN</a>
+        <a href="/fr" target="_top" data-locale-link="fr" class="smaesi-locale-link rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400 transition-all duration-300 hover:bg-white/[0.05] hover:text-white">FR</a>
+        <a href="/ar" target="_top" data-locale-link="ar" class="smaesi-locale-link rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-slate-400 transition-all duration-300 hover:bg-white/[0.05] hover:text-white">AR</a>
+      </nav>
     </div>
   </nav>
 </div>
@@ -743,6 +754,34 @@ gtag('config', 'G-2M6V79H761');
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !panel.classList.contains('hidden')) closeMenu();
+    });
+  })();
+</script>
+
+<style>
+  .smaesi-locale-link {
+    border: 1px solid transparent;
+  }
+  .smaesi-locale-link.smaesi-locale-active {
+    border-color: rgba(196, 181, 253, 0.25);
+    background: rgba(139, 92, 246, 0.15);
+    color: #fff;
+    box-shadow: 0 0 1rem rgba(139, 92, 246, 0.18);
+  }
+</style>
+<script>
+  (function () {
+    var locale = 'en';
+    try {
+      var path = window.top.location.pathname;
+      if (path === '/fr' || path.indexOf('/fr/') === 0) locale = 'fr';
+      else if (path === '/ar' || path.indexOf('/ar/') === 0) locale = 'ar';
+    } catch (e) {}
+
+    document.querySelectorAll('[data-locale-link]').forEach(function (el) {
+      if (el.getAttribute('data-locale-link') === locale) {
+        el.classList.add('smaesi-locale-active');
+      }
     });
   })();
 </script>
@@ -2234,10 +2273,19 @@ gtag('config', 'G-2M6V79H761');
         });
 
         slider.addEventListener('wheel', function (e) {
-          if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-            e.preventDefault();
-            slider.scrollLeft += e.deltaY;
-          }
+          if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+
+          var maxScroll = Math.max(0, slider.scrollWidth - slider.clientWidth);
+          if (maxScroll <= 0) return;
+
+          var atStart = slider.scrollLeft <= 0;
+          var atEnd = slider.scrollLeft >= maxScroll - 1;
+
+          // Let the page scroll when the carousel is already at an edge.
+          if ((e.deltaY < 0 && atStart) || (e.deltaY > 0 && atEnd)) return;
+
+          e.preventDefault();
+          slider.scrollLeft += e.deltaY;
         }, { passive: false });
       }
     })();
