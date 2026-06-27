@@ -1,5 +1,6 @@
 [
   { "from": "text-violet-300\">Menu</span>", "to": "text-violet-300\">القائمة</span>" },
+  { "from": "<span class=\"hidden sm:inline xl:hidden\">CREATE</span>", "to": "<span class=\"hidden sm:inline xl:hidden\">ابتكار</span>" },
   { "from": "Tap below if the chat didn&apos;t open automatically.", "to": "اضغط أدناه إذا لم يفتح واتساب تلقائياً." },
   { "from": "We keep momentum high with focused sprints, direct\n              collaboration, and visible progress every week.", "to": "نحافظ على الزخم بدورات مركزة، تعاون مباشر، وتقدم مرئي كل أسبوع." },
   { "from": "Awwwards · Clutch · CSS Design Awards", "to": "Awwwards · Clutch · CSS Design Awards" },

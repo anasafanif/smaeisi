@@ -3,7 +3,7 @@
   [dir="rtl"] main { width: 100%; max-width: 100%; }
   [dir="rtl"] .text-left { text-align: right; }
   [dir="rtl"] .text-right { text-align: left; }
-  [dir="rtl"] header nav { left: 50%; right: auto; }
+  [dir="rtl"] #header-actions { flex-direction: row-reverse; }
   [dir="rtl"] #mobile-nav nav {
     right: auto;
     left: 0;
@@ -17,7 +17,6 @@
   [dir="rtl"] .eyebrow-animate { flex-direction: row-reverse; }
   [dir="rtl"] .paragraph-animate { text-align: right; }
   [dir="rtl"] .cta-animate { flex-direction: row-reverse; }
-  [dir="rtl"] header .flex.items-center.gap-2 { flex-direction: row-reverse; }
   [dir="rtl"] .fixed.bottom-4 { bottom: 5.5rem; }
   @media (min-width: 640px) {
     [dir="rtl"] .fixed.bottom-4 { bottom: 1.5rem; }
