@@ -118,7 +118,7 @@
   { "from": "<span class=\"relative z-10\">Services</span>", "to": "<span class=\"relative z-10\">Services</span>" },
   { "from": "<span class=\"relative z-10\">About</span>", "to": "<span class=\"relative z-10\">À propos</span>" },
   { "from": "<span class=\"relative z-10\">Process</span>", "to": "<span class=\"relative z-10\">Processus</span>" },
-  { "from": "<span class=\"relative z-10\">Insights</span>", "to": "<span class=\"relative z-10\">Inspirations</span>" },
+  { "from": "<span class=\"relative z-10\">Insights</span>", "to": "<span class=\"relative z-10\">Fonctionnalités</span>" },
   { "from": "aria-label=\"Language\"", "to": "aria-label=\"Langue\"" },
   { "from": "<span class=\"hidden sm:inline xl:hidden\">CREATE</span>", "to": "<span class=\"hidden sm:inline xl:hidden\">CRÉER</span>" },
   { "from": "<span class=\"line-animate-2 block\">digital products</span>", "to": "<span class=\"line-animate-2 block\">des produits digitaux</span>" },

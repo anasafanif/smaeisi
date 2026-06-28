@@ -48,25 +48,31 @@ function applyReplacements(html, files) {
 
 const VISION_AR = `
     <span class="lyric-word">نؤمن</span>
-    <span class="lyric-word">أن</span>
+    <span class="lyric-word">بأن</span>
     <span class="lyric-word">التصميم</span>
-    <span class="lyric-word">العظيم</span>
     <span class="lyric-word">ليس</span>
-    <span class="lyric-word">زينة</span>
-    <span class="lyric-word">—</span>
+    <span class="lyric-word">مجرد</span>
+    <span class="lyric-word">عنصر</span>
+    <span class="lyric-word">تجميلي،</span>
     <span class="lyric-word">بل</span>
-    <span class="lyric-word">قوة.</span>
+    <span class="lyric-word">هو</span>
+    <span class="lyric-word">قوة</span>
+    <span class="lyric-word">دافعة.</span>
     <br class="hidden md:block">
-    <span class="lyric-word">كل</span>
+    <span class="lyric-word">فكل</span>
     <span class="lyric-word">منتج</span>
-    <span class="lyric-word">نصنعه</span>
-    <span class="lyric-word">يُبنى</span>
+    <span class="lyric-word">نبتكره</span>
+    <span class="lyric-word">مصمم</span>
     <span class="lyric-word">لإثارة</span>
     <span class="lyric-word">الفضول،</span>
-    <span class="lyric-word">والتحرك</span>
+    <span class="lyric-word">ونمضي</span>
     <br class="hidden md:block">
-    <span class="lyric-word">بنية،</span>
-    <span class="lyric-word">والإصابة</span>
+    <span class="lyric-word">قدماً</span>
+    <span class="lyric-word">برؤية</span>
+    <span class="lyric-word">هادفة،</span>
+    <span class="lyric-word">لتحقيق</span>
+    <span class="lyric-word">الغاية</span>
+    <span class="lyric-word">المنشودة</span>
     <span class="lyric-word">بدقة.</span>
   `.trim();
 
